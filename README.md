@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-## What is tracked
+## What is being tracked
 
 For each login new record is created with following attributes:
 
