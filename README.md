@@ -18,11 +18,28 @@ Or install it yourself as:
 
 ## Usage
 
-Run the generator
+Run the generator with the model name (User in this example):
 
-    $ rails g devise_login_tracker
+    $ rails g devise_login_tracker User
 
 Add `:login_tracker` to `devise` in your model.
+
+```ruby
+class User < ActiveRecord::Base
+  devise :database_authenticatable, ..... , :login_tracker
+end
+```
+
+## What is tracked
+
+For each login new record is created with following attributes:
+
+* IP address
+* User agent
+* Request ID (UUID)
+* Signed in at
+* Signed out at (upon sign out)
+
 
 ## Contributing
 
