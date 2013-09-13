@@ -24,7 +24,8 @@ module Devise
 
       def attrs_for_login(request)
         { user_id: id, ip_address: request.remote_ip,
-          user_agent: request.user_agent, signed_in_at: Time.now }
+          request_id: request.uuid, user_agent: request.user_agent,
+          signed_in_at: Time.now }
       end
 
       def login_class
