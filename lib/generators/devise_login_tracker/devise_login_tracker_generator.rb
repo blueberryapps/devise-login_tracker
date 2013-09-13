@@ -1,6 +1,6 @@
 require 'rails/generators/migration'
 
-class DeviseLoginTracker < Rails::Generators::NamedBase
+class DeviseLoginTrackerGenerator < Rails::Generators::NamedBase
 
   include Rails::Generators::Migration
 
@@ -53,7 +53,7 @@ class DeviseLoginTracker < Rails::Generators::NamedBase
   end
 
   def model_path
-    @model_path ||= File.join('app', 'models', "#{file_path}/login.rb")
+    @model_path ||= File.join('app', 'models', "#{file_path}_login.rb")
   end
 
 end
