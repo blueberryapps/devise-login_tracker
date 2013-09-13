@@ -1,6 +1,6 @@
 require 'rails/generators/migration'
 
-class DeviseLoginTracer < Rails::Generators::NamedBase
+class DeviseLoginTracker < Rails::Generators::NamedBase
 
   include Rails::Generators::Migration
 
@@ -34,11 +34,11 @@ class DeviseLoginTracer < Rails::Generators::NamedBase
 
       unless model_exists?
         abort "Tried to invoke the model generator for '#{options[:orm]}' but could not find it.\n" <<
-        "Please create your model by hand before calling `rails g devise_login_tracer #{name}`."
+        "Please create your model by hand before calling `rails g devise_login_tracker #{name}`."
       end
     else
       abort "Cannot create a devise model because config.generators.orm is blank.\n" <<
-      "Please create your model by hand or configure your generators orm before calling `rails g devise_login_tracer #{name}`."
+      "Please create your model by hand or configure your generators orm before calling `rails g devise_login_tracker #{name}`."
     end
   end
 
@@ -53,7 +53,7 @@ class DeviseLoginTracer < Rails::Generators::NamedBase
   end
 
   def model_path
-    @model_path ||= File.join('app', 'models', "#{file_path}_login.rb")
+    @model_path ||= File.join('app', 'models', "#{file_path}/login.rb")
   end
 
 end

@@ -1,5 +1,5 @@
 module Devise
-  class LoginTracer
+  class LoginTracker
     class Engine < ::Rails::Engine
     end
   end

@@ -1,6 +1,6 @@
 # Devise::LoginTracer
 
-TODO: Write a gem description
+LoginTracker is a gem that tracks logins of each user.
 
 ## Installation
 
@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the generator
+
+    $ rails g devise_login_tracer
 
 ## Contributing
 

@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'devise/login_tracer/version'
+require 'devise/login_tracker/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "devise-login_tracer"
-  spec.version       = Devise::LoginTracer::VERSION
+  spec.name          = "devise-login_tracker"
+  spec.version       = Devise::LoginTracker::VERSION
   spec.authors       = ["Jiří Zajpt"]
   spec.email         = ["jzajpt@blueberry.cz"]
   spec.description   = %q{Creates a record for each user login}

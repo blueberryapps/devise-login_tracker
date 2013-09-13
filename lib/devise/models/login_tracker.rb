@@ -1,6 +1,6 @@
 module Devise
   module Models
-    module LoginTracer
+    module LoginTracker
 
       def mark_login!(request)
         UserLogin.create(attrs_for_user_login(request))
