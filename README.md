@@ -22,11 +22,14 @@ Run the generator with the model name (User in this example):
 
     $ rails g devise_login_tracker User
 
-Add `:login_tracker` to `devise` in your model.
+Add `:login_tracker` to `devise` in your model and association
+to the login records. Example for User model:
 
 ```ruby
 class User < ActiveRecord::Base
   devise :database_authenticatable, ..... , :login_tracker
+
+  has_many :logins, class_name: 'UserLogin'
 end
 ```
 
