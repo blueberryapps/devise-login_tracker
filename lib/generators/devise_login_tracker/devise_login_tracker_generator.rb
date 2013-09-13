@@ -4,8 +4,8 @@ class DeviseLoginTrackerGenerator < Rails::Generators::NamedBase
 
   include Rails::Generators::Migration
 
-  desc "Generates a model with the given NAME (if one does not exist) with devise " <<
-      "configuration plus a migration file and devise routes."
+  desc "Generates a model with the given NAME (if one does not exist) with" <<
+      "devise configuration plus a migration file and devise routes."
 
   def self.source_root
     @_devise_source_root ||= File.expand_path('../templates', __FILE__)
@@ -30,7 +30,8 @@ class DeviseLoginTrackerGenerator < Rails::Generators::NamedBase
     if model_exists?
       say "* Model #{name}Login already exists."
     elsif options[:orm].present?
-      invoke "model", ["#{name}Login"], :migration => false, :orm => options[:orm]
+      invoke "model", ["#{name}Login", "#{name}:belongs_to"], :migration => false,
+        :orm => options[:orm]
 
       unless model_exists?
         abort "Tried to invoke the model generator for '#{options[:orm]}' but could not find it.\n" <<
