@@ -1,3 +1,5 @@
+require 'warden'
+
 Warden::Manager.after_authentication do |record, warden, opts|
   if record.respond_to?(:mark_login!)
     login_record = record.mark_login!(warden.request)
@@ -5,7 +7,6 @@ Warden::Manager.after_authentication do |record, warden, opts|
     warden.session["#{scope}.login_id"] = login_record.id
   end
 end
-
 
 Warden::Manager.before_logout do |record, warden, opts|
   if record.respond_to?(:mark_logout!)

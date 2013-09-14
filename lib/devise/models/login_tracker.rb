@@ -1,3 +1,5 @@
+require 'active_support/inflector'
+
 module Devise
   module Models
     module LoginTracker
@@ -35,3 +37,4 @@ module Devise
     end
   end
 end
+

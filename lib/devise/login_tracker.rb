@@ -1,4 +1,4 @@
-require 'devise' unless defined?(Devise)
+require 'devise'
 require 'devise/login_tracker/version'
 require 'devise/hooks/login_tracker'
 require 'devise/models/login_tracker'
