@@ -5,7 +5,6 @@ class DeviseCreate<%= table_name.camelize.singularize %>Logins < ActiveRecord::M
       t.integer  :<%= table_name.classify.foreign_key  %>
       t.string :ip_address
       t.string :user_agent
-      t.string :request_id
       t.datetime :signed_in_at
       t.datetime :signed_out_at
     end

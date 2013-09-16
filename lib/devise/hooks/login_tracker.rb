@@ -15,3 +15,4 @@ Warden::Manager.before_logout do |record, warden, opts|
     record.mark_logout!(login_record_id) if login_record_id
   end
 end
+

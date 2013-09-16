@@ -39,7 +39,6 @@ For each login new record is created with following attributes:
 
 * `ip_address` - IP address
 * `user_agent` - User agent
-* `request_id` - Request ID (UUID)
 * `signed_in_at` - Signed in at
 * `signed_in_at` -  Signed out at (upon sign out)
 
