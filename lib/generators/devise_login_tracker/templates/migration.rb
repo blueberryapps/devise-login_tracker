@@ -3,8 +3,8 @@ class DeviseCreate<%= table_name.camelize.singularize %>Logins < ActiveRecord::M
   def up
     create_table :<%= table_name.singularize %>_logins do |t|
       t.integer  :<%= table_name.classify.foreign_key  %>
-      t.string :ip_address
-      t.string :user_agent
+      t.inet     :ip_address
+      t.string   :user_agent
       t.datetime :signed_in_at
       t.datetime :signed_out_at
     end
